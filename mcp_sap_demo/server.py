@@ -104,7 +104,8 @@ async def process_customer_document(document_type: str, document_content: str, c
     return json.dumps(processed_data, ensure_ascii=False, indent=2)
 
 def main():
-    mcp.run()
+    import sys
+    mcp.run(transport='stdio')
 
 if __name__ == "__main__":
     main()
