@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-sap-demo"
+version = "0.1.0"
+description = "SAP Agent AI Demo MCP"
+authors = [
+    { name = "bachstudio", email = "bachstudio@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "requests"
+]
+
+[project.scripts]
+mcp-sap-demo = "mcp_sap_demo.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcp_sap_demo"]
